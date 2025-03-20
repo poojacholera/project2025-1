@@ -121,12 +121,10 @@ function Twister (){
         return(
             <>
                 <span className="game-heading">Twister</span>
-                <div className="game-container">
+                <div className="game-container" style={{backgroundColor:IconColor}}>
                 <ErrorBoundary fallback={<p>Something went wrong</p>}>
-                    <div className="limb-color-circle"  style={{borderColor:IconColor}}>
-                        <span className="limb-icon">{limbIcon} 
-                                  
-                            </span>
+                    <div className="limb-color-circle" >
+                        <img className="limb-icon" src={limbIcon}  />
 
                     </div>
                     <Box className="spinner-output"> 
@@ -134,7 +132,7 @@ function Twister (){
                         <span style={{color:"darkgray"}}>moves:{moves}</span>
                         <div>
                             <TextToSpeech text={outputText} PlaySpinner={Spinner} sendGameSatus={getGameStatus} game={gameStatus} />
-                            <span className="counter" style={{color:"darkgray"}}>{counter}</span>
+                            <span className="counter">{counter}</span>
                             <TimerSection time={time} sendTimer={getTimer} counter={counter} currentTimer={timer.current} sendGameSatus={getGameStatus} game={gameStatus} />
                          </div>
                     </Box>

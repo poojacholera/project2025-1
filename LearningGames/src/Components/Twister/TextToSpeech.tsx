@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";5FB5D6
+import  { useState, useEffect } from "react";
 
 const TextToSpeech = ( {text,PlaySpinner, sendGameSatus, game}) => {
   const [isPaused, setIsPaused] = useState(false);
@@ -17,12 +17,13 @@ const TextToSpeech = ( {text,PlaySpinner, sendGameSatus, game}) => {
 
   const handlePlay = () => {
     sendGameSatus(true);
+    PlaySpinner();
     const synth = window.speechSynthesis;
     if (isPaused) {
       synth.resume();
     }
     synth.speak(utterance);
-    PlaySpinner();
+   
     setIsPaused(false);
   };
 
@@ -45,9 +46,9 @@ const TextToSpeech = ( {text,PlaySpinner, sendGameSatus, game}) => {
 
   return (
     <div>
-      <button onClick={handlePlay}>{( isPaused) ?  "Tap" : "Play"}</button>
+      <button className="button button-play" onClick={handlePlay}>{( isPaused && game) ?  "Tap" : "Play"}</button>
       {/* <button onClick={handlePause}>Pause</button> */}
-      <button onClick={handleStop}>Stop</button> 
+      <button className="button button-stop" onClick={handleStop}>Stop</button> 
     </div>
   );
 };

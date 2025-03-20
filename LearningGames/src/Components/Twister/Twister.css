@@ -5,7 +5,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3em;
     font-weight: 800;
-    background: linear-gradient(to right, red,red, yellow,#5FB5D6,rgb(15, 215, 15));
+    background: linear-gradient(to right,red, red,yellow,rgb(95, 181, 214),#08ff00);
     color: transparent;
     background-clip: text;
 }
@@ -16,7 +16,7 @@
     min-height: 50vh;
     /* height: max-content; */
     min-width: 50vh;
-    border:2px dotted rgb(255, 255, 255) ;
+    /* border:2px solid rgb(255, 255, 255) ; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-color: rgb(255, 255, 255);
     padding: 16px;
     /* background-color: #ffff00; */
 
@@ -45,17 +45,29 @@ img.limb-icon{
 }
 .spinner-output-text{
     display: block;
+    flex-direction: column;
+    width:300px;
+    text-overflow: wrap;
     text-transform: uppercase;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2em;
-    font-weight: 550;
-    color:rgba(25, 11, 11, 0.775);
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-size: 1.5em;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.11);
+    color:rgb(253, 253, 253);
 
 }
 .counter{
     display: block;
     font-size: 3em;
-    color: aqua;
+    background-color: rgba(0, 0, 0, 0.11);
+    color: rgb(255, 255, 255);
     padding: 0;
     margin: 0;
+}
+.button{
+    display: inline-flex;
+    flex-direction: row;
+    margin:2px;
+    color:white;
+    background-color: black;
 }
